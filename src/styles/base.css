@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/assets/fonts/Roboto.ttf");
+}
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #1B1A17;
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid #A35709;
+  background-color: #1B1A17;
+  color: #F0E3CA;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #242320;
+  border-color: #FF8303;
+}
+
+p,
+h3 {
+  color: #F0E3CA;
+}
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  h3,
+  p {
+    font-size: 20px;
+  }
+  .main-section {
+    padding: 0px;
+  }
+  .base-form {
+    width: 100%;
+    margin: 0;
+  }
+  .base-form .input-section {
+    height: 100px;
+    width: 75%;
+  }
+  .base-form .add-button {
+    width: 25%;
+  }
+  .delete-window {
+    width: 60%;
+    padding: 10px;
+  }
+  .tasks-list .task-item .delete-button {
+    right: 15px;
+    width: 10%;
+  }
+  .edit-section .edit .buttons {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1000px) {
+  .delete-window {
+    width: 50%;
+  }
+  .tasks-list .task-item .delete-button {
+    right: 15px;
+    width: 5%;
+  }
+}
+@media screen and (min-width: 2000px) and (max-width: 2600px) {
+  .base-form {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    height: 250px;
+  }
+  .base-form .input-section .input-element {
+    height: 45%;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 30px;
+  }
+  ul {
+    margin: 5px auto;
+    width: 80%;
+    height: auto;
+  }
+  ul .task-item {
+    height: 100px;
+  }
+  .task-menu button {
+    width: 50px;
+    height: 50px;
+  }
+  .share-section .menu {
+    height: 150px;
+    width: 50%;
+  }
+  .delete-window {
+    height: 250px;
+    width: 25%;
+  }
+  .delete-window p {
+    font-size: 40px;
+  }
+  .delete-window button {
+    height: 40px;
+    width: 20%;
+  }
+  .edit-section .edit {
+    top: 50%;
+    right: 15%;
+    left: 15%;
+  }
+  .edit-section .edit .edit-elements {
+    height: 90%;
+  }
+}/*# sourceMappingURL=base.css.map */

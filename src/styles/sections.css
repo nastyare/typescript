@@ -1,0 +1,237 @@
+.main-section {
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.base-form {
+  display: flex;
+  flex-direction: row;
+  padding: 23px 22px;
+  height: 150px;
+  justify-content: center;
+}
+.base-form .input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+.base-form .input-section .input-element {
+  background-color: #242320;
+  border: 1px solid #A35709;
+  height: 48px;
+  color: #F0E3CA;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.base-form .add-button {
+  margin-left: 10px;
+  width: 10%;
+  background-image: url("../src/assets/images/add-button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.no-tasks {
+  position: relative;
+  top: 40%;
+  left: 45%;
+  transform: translate(10%, 30%);
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+}
+.no-tasks ::before,
+.no-tasks ::after {
+  content: "";
+  display: block;
+  width: 100px;
+  background-color: #242320;
+  border: 3px solid #A35709;
+}
+.no-tasks p {
+  font-size: 24px;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  padding: 0px 20px;
+  gap: 10px;
+  list-style: none;
+}
+.tasks-list .task-item {
+  display: flex;
+  background-color: #242320;
+  border: 1px solid #A35709;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 16px;
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.tasks-list .task-item h3,
+.tasks-list .task-item p {
+  margin: 0;
+  width: 80%;
+  background-color: #242320;
+}
+.tasks-list .task-item p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.tasks-list .task-item .delete-button {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../src/assets/images/delete-button.svg");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 3%;
+  height: 50%;
+}
+.tasks-list .task-item.expanded {
+  margin-bottom: 60px;
+}
+
+.task-menu {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+.task-menu button {
+  width: 35px;
+  height: 35px;
+  font-size: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #242320;
+}
+.task-menu button.share-button {
+  background-image: url("../src/assets/images/share-button.svg");
+}
+.task-menu button.info-button {
+  background-image: url("../src/assets/images/info-button.svg");
+}
+.task-menu button.edit-button {
+  background-image: url("../src/assets/images/edit-button.svg");
+}
+
+.background {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-window {
+  margin: 15% auto;
+  padding: 20px;
+  width: 30%;
+  height: 180px;
+  text-align: center;
+  border-top: 6px solid #A35709;
+  background-color: #1B1A17;
+}
+.delete-window p {
+  font-size: 30px;
+}
+.delete-window button {
+  margin-right: 10px;
+  height: 30px;
+  width: 30%;
+  font-size: 16px;
+}
+
+.share-section {
+  justify-content: center;
+}
+.share-section .menu {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  list-style: none;
+  border: 1px solid #A35709;
+  background-color: #1B1A17;
+}
+.share-section .menu li {
+  cursor: pointer;
+}
+
+.edit-section .edit {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  top: 30%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  background-color: #1B1A17;
+}
+.edit-section .edit .edit-elements {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  margin-top: 10px auto;
+  flex-direction: column;
+  align-items: center;
+}
+.edit-section .edit .edit-elements .edit-element {
+  width: 90%;
+  padding: 10px;
+  color: #F0E3CA;
+  background-color: #242320;
+  border: 1px solid #A35709;
+  text-align: left;
+  border-radius: 8px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.edit-section .edit .edit-elements .title-element {
+  height: 20%;
+  margin-bottom: 10px;
+}
+.edit-section .edit .edit-elements .description-element {
+  height: 80%;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.edit-section .edit .buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin: 10px auto;
+}
+.edit-section .edit .buttons button {
+  padding: 10px 15px;
+}/*# sourceMappingURL=sections.css.map */
