@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import useOutsideClick from "../hooks/useOutsideClick";
+import { toast } from "react-toastify";
 
 interface EditTaskModalProps {
 	onClose: () => void;
@@ -19,13 +20,15 @@ const EditTaskModal: React.FC<EditTaskModalProps> = ({
 	const modalRef = useRef<HTMLDivElement>(null);
 
 	const handleSave = () => {
+		if (!title.trim() || !description.trim()) {
+			toast.error("Title and description must be filled");
+			return;
+		}
 		onSave(title, description);
 		onClose();
 	};
 
 	useOutsideClick(modalRef, onClose);
-
-	const isDisabled = !title.trim() || !description.trim();
 
 	return (
 		<div className="edit-section background">
@@ -48,7 +51,7 @@ const EditTaskModal: React.FC<EditTaskModalProps> = ({
 					<button className="cancel" onClick={onClose}>
 						Cancel
 					</button>
-					<button className="save" onClick={handleSave} disabled={isDisabled}>
+					<button className="save" onClick={handleSave}>
 						Save
 					</button>
 				</div>
