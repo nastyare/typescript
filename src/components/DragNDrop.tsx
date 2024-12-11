@@ -1,12 +1,7 @@
 import React from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import TasksList from "./TasksList";
-
-interface Task {
-	id: string;
-	title: string;
-	description: string;
-}
+import { Task } from "../interface/types";
 
 interface DragNDropProps {
 	tasks: Task[];

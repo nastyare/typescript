@@ -1,12 +1,7 @@
 import React from "react";
 import { Droppable } from "react-beautiful-dnd";
 import TaskItem from "./TaskItem";
-
-interface Task {
-	id: string;
-	title: string;
-	description: string;
-}
+import { Task } from "../interface/types";
 
 interface TasksListProps {
 	tasks: Task[];

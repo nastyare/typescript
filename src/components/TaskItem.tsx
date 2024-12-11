@@ -1,11 +1,6 @@
 import React from "react";
 import { Draggable } from "react-beautiful-dnd";
-
-interface Task {
-	id: string;
-	title: string;
-	description: string;
-}
+import { Task } from "../interface/types";
 
 interface TaskItemProps {
 	task: Task;

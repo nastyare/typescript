@@ -5,12 +5,7 @@ import {
 } from "../storage/localStorage";
 import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
-
-interface Task {
-	id: string;
-	title: string;
-	description: string;
-}
+import { Task } from "../interface/types";
 
 interface TasksState {
 	tasks: Task[];
@@ -49,6 +44,7 @@ const tasksSlice = createSlice({
 			}>
 		) => {
 			const { id, newTitle, newDescription } = action.payload;
+
 			const task = state.tasks.find((task) => task.id === id);
 			if (task) {
 				task.title = newTitle;
